@@ -77,8 +77,8 @@ class ScoresViewController: UICollectionViewController {
         }
     }
     
-    @IBAction func showDetails(_ segue: UIStoryboardSegue) {
-        let source = segue.source as! VoteViewController
+    @IBAction func unwindFromVote(_ segue: UIStoryboardSegue) {
+       // let source = segue.source as! VoteViewController
         
         collectionView!.reloadItems(at: collectionView!.indexPathsForSelectedItems!)
         

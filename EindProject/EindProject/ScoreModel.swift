@@ -6,9 +6,9 @@ class ScoreModel {
         medications = [:]
         
         let pil1 = Medication(name: "Buscopan", extra: "Krampen", description: "20mg, max 3 per dag")
-        let pil2 = Medication(name: "Buscopan", extra: "Krampen", description: "20mg, max 3 per dag")
-        let pil3 = Medication(name: "Buscopan", extra: "Krampen", description: "20mg, max 3 per dag")
-        let pil4 = Medication(name: "Buscopan", extra: "Krampen", description: "20mg, max 3 per dag")
+        let pil2 = Medication(name: "test1", extra: "Krampen", description: "20mg, max 3 per dag")
+        let pil3 = Medication(name: "test2", extra: "Krampen", description: "20mg, max 3 per dag")
+        let pil4 = Medication(name: "test3", extra: "Krampen", description: "20mg, max 3 per dag")
     
 
         medications[pil1] = 5
