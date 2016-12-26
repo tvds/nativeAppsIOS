@@ -14,12 +14,10 @@
 		0B51A6661E0ABABE00F5CC55 /* EindProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51A6651E0ABABE00F5CC55 /* EindProjectTests.swift */; };
 		0B51A6711E0ABABE00F5CC55 /* EindProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51A6701E0ABABE00F5CC55 /* EindProjectUITests.swift */; };
 		0B51A6821E0ACA8A00F5CC55 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51A6811E0ACA8A00F5CC55 /* AddViewController.swift */; };
-		0B51A6861E0ACB4C00F5CC55 /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51A6851E0ACB4C00F5CC55 /* ScoreModel.swift */; };
-		0B51A68A1E0AD60D00F5CC55 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51A6891E0AD60D00F5CC55 /* ColorCell.swift */; };
 		0B51A68C1E0AD61B00F5CC55 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51A68B1E0AD61B00F5CC55 /* HeaderView.swift */; };
-		0B51A68E1E0AD62500F5CC55 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51A68D1E0AD62500F5CC55 /* Color.swift */; };
-		0B51A6901E0AD63600F5CC55 /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51A68F1E0AD63600F5CC55 /* VoteViewController.swift */; };
-		0B51A6921E0ADF9000F5CC55 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51A6911E0ADF9000F5CC55 /* ScoresViewController.swift */; };
+		0B51A68E1E0AD62500F5CC55 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51A68D1E0AD62500F5CC55 /* Medication.swift */; };
+		0B737FA31E0E904B00C589F4 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B737FA21E0E904B00C589F4 /* MasterViewController.swift */; };
+		0B737FA51E0E907100C589F4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B737FA41E0E907100C589F4 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +51,10 @@
 		0B51A6701E0ABABE00F5CC55 /* EindProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EindProjectUITests.swift; sourceTree = "<group>"; };
 		0B51A6721E0ABABE00F5CC55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B51A6811E0ACA8A00F5CC55 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		0B51A6851E0ACB4C00F5CC55 /* ScoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
-		0B51A6891E0AD60D00F5CC55 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		0B51A68B1E0AD61B00F5CC55 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		0B51A68D1E0AD62500F5CC55 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		0B51A68F1E0AD63600F5CC55 /* VoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
-		0B51A6911E0ADF9000F5CC55 /* ScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
+		0B51A68D1E0AD62500F5CC55 /* Medication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		0B737FA21E0E904B00C589F4 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		0B737FA41E0E907100C589F4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				0B51A6811E0ACA8A00F5CC55 /* AddViewController.swift */,
-				0B51A68F1E0AD63600F5CC55 /* VoteViewController.swift */,
-				0B51A6911E0ADF9000F5CC55 /* ScoresViewController.swift */,
+				0B737FA21E0E904B00C589F4 /* MasterViewController.swift */,
+				0B737FA41E0E907100C589F4 /* DetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -152,8 +148,7 @@
 		0B51A67F1E0ACA4000F5CC55 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0B51A6851E0ACB4C00F5CC55 /* ScoreModel.swift */,
-				0B51A68D1E0AD62500F5CC55 /* Color.swift */,
+				0B51A68D1E0AD62500F5CC55 /* Medication.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -161,7 +156,6 @@
 		0B51A6801E0ACA5200F5CC55 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0B51A6891E0AD60D00F5CC55 /* ColorCell.swift */,
 				0B51A68B1E0AD61B00F5CC55 /* HeaderView.swift */,
 			);
 			name = Views;
@@ -301,14 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B51A6901E0AD63600F5CC55 /* VoteViewController.swift in Sources */,
-				0B51A6861E0ACB4C00F5CC55 /* ScoreModel.swift in Sources */,
 				0B51A68C1E0AD61B00F5CC55 /* HeaderView.swift in Sources */,
-				0B51A6921E0ADF9000F5CC55 /* ScoresViewController.swift in Sources */,
-				0B51A68E1E0AD62500F5CC55 /* Color.swift in Sources */,
+				0B51A68E1E0AD62500F5CC55 /* Medication.swift in Sources */,
 				0B51A6821E0ACA8A00F5CC55 /* AddViewController.swift in Sources */,
 				0B51A6511E0ABABE00F5CC55 /* AppDelegate.swift in Sources */,
-				0B51A68A1E0AD60D00F5CC55 /* ColorCell.swift in Sources */,
+				0B737FA31E0E904B00C589F4 /* MasterViewController.swift in Sources */,
+				0B737FA51E0E907100C589F4 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +545,7 @@
 				0B51A6771E0ABABE00F5CC55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B51A6781E0ABABE00F5CC55 /* Build configuration list for PBXNativeTarget "EindProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +554,7 @@
 				0B51A67A1E0ABABE00F5CC55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B51A67B1E0ABABE00F5CC55 /* Build configuration list for PBXNativeTarget "EindProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -569,6 +563,7 @@
 				0B51A67D1E0ABABE00F5CC55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

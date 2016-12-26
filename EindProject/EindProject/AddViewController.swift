@@ -2,7 +2,7 @@ import UIKit
 
 class AddViewController: UITableViewController {
     
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+   /* @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var nameField: UITextField!
    
     @IBOutlet weak var extraField: UITextField!
@@ -42,5 +42,5 @@ extension AddViewController: UITextFieldDelegate {
             saveButton.isEnabled = string.characters.count > 0
         }
         return true
-    }
+    }*/
 }
