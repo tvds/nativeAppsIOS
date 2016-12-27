@@ -169,10 +169,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Sc-WA-BPo" userLabel="Master" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dev-Bg-K1w">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="dev-Bg-K1w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.17758570835924795" green="0.76868998066666672" blue="0.40405658609150386" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.1803921568627451" green="0.7686274509803922" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -266,6 +266,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9mW-1W-fgn"/>
+        <segue reference="wj4-UT-VuB"/>
     </inferredMetricsTieBreakers>
 </document>
