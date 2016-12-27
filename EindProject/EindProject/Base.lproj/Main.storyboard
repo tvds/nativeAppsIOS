@@ -19,7 +19,7 @@
                             <tableViewSection headerTitle="Name" id="YpQ-Ng-qQi">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rcW-gQ-92Y">
-                                        <rect key="frame" x="0.0" y="119.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="120" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rcW-gQ-92Y" id="x4H-ZO-5IT">
                                             <frame key="frameInset" width="375" height="44"/>
@@ -47,7 +47,7 @@
                             <tableViewSection headerTitle="Description" id="6Mf-n4-xBC" userLabel="Description">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sa2-hJ-H8F">
-                                        <rect key="frame" x="0.0" y="219.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sa2-hJ-H8F" id="Z4l-Pa-own">
                                             <frame key="frameInset" width="375" height="44"/>
@@ -138,7 +138,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Medications" id="LuJ-Ad-n5B" userLabel="Navigation Item">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="DBb-h5-ZwH"/>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="ZlN-V8-iqU">
                             <connections>
                                 <segue destination="3bW-p4-Whn" kind="popoverPresentation" identifier="add" popoverAnchorBarButtonItem="ZlN-V8-iqU" id="NWo-eD-0Dk">

@@ -8,6 +8,7 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     let searchController = UISearchController(searchResultsController: nil)
     var medicationArray = [Medication]()
+        //var model: MedicationModel!
     var filteredMedications = [Medication]()
     
     // MARK: - View Setup
@@ -42,6 +43,7 @@ class MasterViewController: UITableViewController {
         }
     }
     
+ 
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
@@ -76,9 +78,18 @@ class MasterViewController: UITableViewController {
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            medicationArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+           // .deleteRowsAtIndexPaths([indexPath as IndexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
     // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
+        switch segue.identifier! {
+        case "showDetail":
             if let indexPath = tableView.indexPathForSelectedRow {
                 let medication: Medication
                 if searchController.isActive && searchController.searchBar.text != "" {
@@ -91,12 +102,15 @@ class MasterViewController: UITableViewController {
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
+        default:
+            break
         }
+
     }
     
     @IBAction func unwindFromAdd(_ segue: UIStoryboardSegue) {
-       // let source = segue.source as! AddViewController
-       
+        let source = segue.source as! AddViewController
+        medicationArray.append(source.medication!)
         tableView!.reloadData()
 
     }

@@ -9,7 +9,7 @@
 import Foundation
 
 class MedicationModel {
-var medications = [Medication]()
+/*var medications = [Medication]()
 
     func setDummyData(){
         medications = [
@@ -45,5 +45,5 @@ var medications = [Medication]()
             fatalError("Invalid index into MedicationModel: \(index)")
         }
         medications.remove(at: index)
-    }
+    }*/
 }
