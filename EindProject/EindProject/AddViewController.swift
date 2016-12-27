@@ -2,15 +2,14 @@ import UIKit
 
 class AddViewController: UITableViewController {
     
-   /* @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var nameField: UITextField!
    
-    @IBOutlet weak var extraField: UITextField!
    
     @IBOutlet weak var descriptionField: UITextField!
     
     
-    var color: Medication?
+    var medication: Medication?
     
     override func viewDidLoad() {
         nameField.delegate = self
@@ -24,9 +23,8 @@ class AddViewController: UITableViewController {
     
     @IBAction func save() {
         let name = nameField.text!
-        let extra = extraField.text!
         let description = descriptionField.text!
-        color = Medication(name: name, extra: extra, description: description)
+        medication = Medication(description: description, name: name)
         performSegue(withIdentifier: "added", sender: self)
     }
 }
@@ -42,5 +40,5 @@ extension AddViewController: UITextFieldDelegate {
             saveButton.isEnabled = string.characters.count > 0
         }
         return true
-    }*/
+    }
 }
