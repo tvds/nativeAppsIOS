@@ -22,7 +22,7 @@
                                         <rect key="frame" x="0.0" y="120" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rcW-gQ-92Y" id="x4H-ZO-5IT">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-Pq-Eks">
@@ -47,7 +47,7 @@
                             <tableViewSection headerTitle="Description" id="6Mf-n4-xBC" userLabel="Description">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sa2-hJ-H8F">
-                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="221" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sa2-hJ-H8F" id="Z4l-Pa-own">
                                             <frame key="frameInset" width="375" height="44"/>
@@ -73,12 +73,47 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="PHOTO" id="p49-Uu-yVp" userLabel="Description">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="344" id="APP-LV-Vnp">
+                                        <rect key="frame" x="0.0" y="322" width="375" height="344"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="APP-LV-Vnp" id="AuR-0j-tVL">
+                                            <frame key="frameInset" width="375" height="343"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-wZ-qMX">
+                                                    <frame key="frameInset" width="375" height="259"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbX-TX-pSJ">
+                                                    <frame key="frameInset" minX="324" minY="267" width="41" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Photo"/>
+                                                    <connections>
+                                                        <action selector="shootPhoto:" destination="OLp-0R-hlj" eventType="touchUpInside" id="c9A-q6-q0B"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idz-32-cjx">
+                                                    <frame key="frameInset" minX="7" minY="267" width="48" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Library"/>
+                                                    <connections>
+                                                        <action selector="photoFromLibrary:" destination="OLp-0R-hlj" eventType="touchUpInside" id="KKG-cK-OXl"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="OLp-0R-hlj" id="SU6-S9-f7e"/>
                             <outlet property="delegate" destination="OLp-0R-hlj" id="r18-at-D42"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add a color" id="ycY-xW-MUa">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="b62-vs-toC">
                             <connections>
@@ -91,8 +126,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="descriptionField" destination="UPp-PB-ann" id="MPZ-EY-uWc"/>
+                        <outlet property="myImageView" destination="Cyt-wZ-qMX" id="Bg5-Sz-oJM"/>
                         <outlet property="nameField" destination="mqe-Pq-Eks" id="TTT-8t-67w"/>
                         <outlet property="saveButton" destination="SBc-Mr-VPh" id="jrd-hb-45q"/>
                     </connections>
@@ -100,7 +137,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZE3-Gg-cw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KTy-qL-ISI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3366" y="-568"/>
+            <point key="canvasLocation" x="3365.5999999999999" y="-568.06596701649175"/>
         </scene>
         <!--Master-->
         <scene sceneID="fZj-wc-KH2">
@@ -115,11 +152,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j31-yu-RWd" id="lu0-w7-5j4">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IUA-Lj-6wv">
-                                            <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -138,6 +175,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Medications" id="LuJ-Ad-n5B" userLabel="Navigation Item">
+                        <barButtonItem key="leftBarButtonItem" title="Quit" id="viw-kd-ZvI">
+                            <connections>
+                                <action selector="quitApp:" destination="axd-0S-F3J" id="sbO-in-WF5"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="ZlN-V8-iqU">
                             <connections>
                                 <segue destination="3bW-p4-Whn" kind="popoverPresentation" identifier="add" popoverAnchorBarButtonItem="ZlN-V8-iqU" id="NWo-eD-0Dk">
@@ -169,7 +211,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Sc-WA-BPo" userLabel="Master" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="dev-Bg-K1w">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dev-Bg-K1w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.1803921568627451" green="0.7686274509803922" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
@@ -266,6 +308,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wj4-UT-VuB"/>
+        <segue reference="9mW-1W-fgn"/>
     </inferredMetricsTieBreakers>
 </document>

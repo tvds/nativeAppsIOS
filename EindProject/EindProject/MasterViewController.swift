@@ -108,11 +108,16 @@ class MasterViewController: UITableViewController {
 
     }
     
+    @IBAction func quitApp(_ sender: AnyObject) {
+        exit(0);
+    }
+    
     @IBAction func unwindFromAdd(_ segue: UIStoryboardSegue) {
         let source = segue.source as! AddViewController
-        medicationArray.append(source.medication!)
+        if source.medication != nil {
+            medicationArray.append(source.medication!)
+        }
         tableView!.reloadData()
-
     }
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
