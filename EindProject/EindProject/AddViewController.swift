@@ -26,7 +26,7 @@ class AddViewController: UITableViewController ,UIImagePickerControllerDelegate,
     }
     
     @IBAction func photoFromLibrary(_ sender: UIButton) {
-        picker.allowsEditing = false
+        picker.allowsEditing = true
         picker.sourceType = .photoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(picker, animated: true, completion: nil)
@@ -68,6 +68,16 @@ class AddViewController: UITableViewController ,UIImagePickerControllerDelegate,
         performSegue(withIdentifier: "added", sender: self)
     }
     
+   /* func saveImage (image: UIImage, path: String ) -> Bool{
+        
+        let pngImageData = UIImagePNGRepresentation(image)
+        //let jpgImageData = UIImageJPEGRepresentation(image, 1.0)   // if you want to save as JPEG
+        let result = pngImageData!.writeToFile(path, atomically: true)
+        
+        return result
+ 
+    }*/
+    
   
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
@@ -76,7 +86,8 @@ class AddViewController: UITableViewController ,UIImagePickerControllerDelegate,
     private func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
-        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        var  chosenImage = UIImage()
+        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         myImageView.contentMode = .scaleAspectFit
         myImageView.image = chosenImage
         dismiss(animated:true, completion: nil)
