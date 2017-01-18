@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
         if let detailMedication = detailMedication {
             if let detailDescriptionLabel = detailDescriptionLabel, let medicationImageView = medicationImageView {
                 detailDescriptionLabel.text = detailMedication.description
-                medicationImageView.image = UIImage(named: detailMedication.name)
+                medicationImageView.image =  detailMedication.image
                 title = detailMedication.name
             }
         }

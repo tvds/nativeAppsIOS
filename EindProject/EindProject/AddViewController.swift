@@ -7,9 +7,9 @@ class AddViewController: UITableViewController ,UIImagePickerControllerDelegate,
    
    
     @IBOutlet weak var descriptionField: UITextField!
-    @IBOutlet weak var myImageView: UIImageView!
     let picker = UIImagePickerController()
     
+    @IBOutlet weak var myImageView: UIImageView!
     
     
     var medication: Medication?
@@ -26,11 +26,10 @@ class AddViewController: UITableViewController ,UIImagePickerControllerDelegate,
     }
     
     @IBAction func photoFromLibrary(_ sender: UIButton) {
+        picker.delegate = self
+        picker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
         picker.allowsEditing = true
-        picker.sourceType = .photoLibrary
-        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        present(picker, animated: true, completion: nil)
-
+        self.present(picker, animated: true, completion: nil)
     }
     
     @IBAction func shootPhoto(_ sender: UIButton) {
@@ -64,33 +63,33 @@ class AddViewController: UITableViewController ,UIImagePickerControllerDelegate,
     @IBAction func save() {
         let name = nameField.text!
         let description = descriptionField.text!
-        medication = Medication(description: description, name: name)
-        performSegue(withIdentifier: "added", sender: self)
+        if (myImageView.image != nil) {
+            let imageData = UIImageJPEGRepresentation(myImageView.image!, 0.6)
+            let compressedJPGImage = UIImage(data: imageData!)
+            
+            medication = Medication(description: description, name: name, image: compressedJPGImage!)
+
+        }else{
+            medication = Medication(description: description, name: name)
+        }
+                performSegue(withIdentifier: "added", sender: self)
     }
     
-   /* func saveImage (image: UIImage, path: String ) -> Bool{
-        
-        let pngImageData = UIImagePNGRepresentation(image)
-        //let jpgImageData = UIImageJPEGRepresentation(image, 1.0)   // if you want to save as JPEG
-        let result = pngImageData!.writeToFile(path, atomically: true)
-        
-        return result
- 
-    }*/
-    
+  
+   
   
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
-    private func imagePickerController(_ picker: UIImagePickerController,
+    func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         var  chosenImage = UIImage()
-        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        myImageView.contentMode = .scaleAspectFit
-        myImageView.image = chosenImage
-        dismiss(animated:true, completion: nil)
+        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+        myImageView.contentMode = .scaleAspectFit //3
+        myImageView.image = chosenImage //4
+        dismiss(animated:true, completion: nil) //5
     }
 }
 
