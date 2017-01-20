@@ -6,19 +6,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-       // let model = MedicationModel()
-       // model.setDummyData()
-        
+      
         // Override point for customization after application launch.
         let splitViewController = window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         splitViewController.delegate = self
-       // let masterViewController = (window!.rootViewController as! UINavigationController).topViewController as! MasterViewController
-       // masterViewController.model = model
-        UISearchBar.appearance().barTintColor = UIColor.candyGreen()
+        UISearchBar.appearance().barTintColor = UIColor.lightBlue()
         UISearchBar.appearance().tintColor = UIColor.white
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = UIColor.candyGreen()
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = UIColor.lightBlue()
         return true
     }
     
@@ -36,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 }
 
 extension UIColor {
-    static func candyGreen() -> UIColor {
-        return UIColor(red: 67.0/255.0, green: 205.0/255.0, blue: 135.0/255.0, alpha: 1.0)
+    static func lightBlue() -> UIColor {
+        return UIColor(red: 0.0/255.0, green: 140/255.0, blue: 143/255.0, alpha: 1.0)
     }
 }

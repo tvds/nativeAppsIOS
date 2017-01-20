@@ -29,7 +29,7 @@
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medication app" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5U-RN-RQK">
                                 <frame key="frameInset" minX="89" minY="280" width="196" height="106"/>
@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.18955272055008293" green="0.76868998070000005" blue="0.4074884980371723" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.17981988191604614" green="0.5913851261138916" blue="0.55198889970779419" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

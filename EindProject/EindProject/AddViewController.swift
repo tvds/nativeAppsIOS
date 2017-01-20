@@ -82,14 +82,16 @@ class AddViewController: UITableViewController ,UIImagePickerControllerDelegate,
         dismiss(animated: true, completion: nil)
     }
     
+    //source:https://makeapppie.com/2016/06/28/how-to-use-uiimagepickercontroller-for-a-camera-and-photo-library-in-swift-3-0/
+    
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         var  chosenImage = UIImage()
-        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
-        myImageView.contentMode = .scaleAspectFit //3
-        myImageView.image = chosenImage //4
-        dismiss(animated:true, completion: nil) //5
+        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        myImageView.contentMode = .scaleAspectFit
+        myImageView.image = chosenImage
+        dismiss(animated:true, completion: nil)
     }
 }
 
@@ -105,4 +107,5 @@ extension AddViewController: UITextFieldDelegate {
         }
         return true
     }
+
 }

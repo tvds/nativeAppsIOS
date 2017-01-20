@@ -4,39 +4,23 @@ import UIKit
 
 class MasterViewController: UITableViewController {
     
-    // MARK: - Properties
+    
+    var model = MedicationModel()
     var detailViewController: DetailViewController? = nil
     let searchController = UISearchController(searchResultsController: nil)
-    var medicationArray = [Medication]()
-        //var model: MedicationModel!
     var filteredMedications = [Medication]()
-    
-    // MARK: - View Setup
+  
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        medicationArray = [
-            Medication(description:"Behandeling parkinson", name:"Akineton"),
-            Medication(description:"antibioticum", name:"Amoxiclav teva"),
-            Medication(description:"Hypertensie", name:"Bisoprolol"),
-            Medication(description:"Spasmolytica, heft verkramping (spasmen) op in maag-darmkanaal, galwegen, urinewegen.", name:"Buscopan (oraal, I.M)"),
-            Medication(description:"Antitrombotica/anticoagulantia. Antistolling, behandeling diverse cardiovasculaire problemen", name:"Clexane (subcutaan)"),
-            Medication(description:"Behandeling Parkinson", name:"Corbilta"),
-            Medication(description:"Antibioticum", name:"Clamoxyl I.M"),
-            Medication(description:"Opheffen van luchtwegvernauwing bij COPD", name:"Combivent unit dose"),
-            Medication(description:"Anti-Alzheimer middelen", name:"Donepezil"),
-            Medication(description:"Krachtige pijnstiller", name:"Durogesic (pleister)"),
-            Medication(description:"Antitrombotica", name:"Eliquis"),
-            Medication(description:"Diarree", name:"Enterol")
-        ]
-        
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
-        tableView.tableHeaderView = searchController.searchBar
-        self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
+        model.setDummyData()                                        // haalt dummy data op
+        searchController.searchResultsUpdater = self                // check wanneer text veranderd in searchbar
+        searchController.dimsBackgroundDuringPresentation = false    // searchController ligt op een andere controller waar de resultaten op verschijnen, die mag dus niet gedimd worden
+        definesPresentationContext = true                           // searchbar verdwijnt bij veranderen van view
+        tableView.tableHeaderView = searchController.searchBar      // searchbar toevoegen aan header
+        self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)  // fixt white gap tussen header en results
 
         
-
         if let splitViewController = splitViewController {
             let controllers = splitViewController.viewControllers
             detailViewController = (controllers[controllers.count - 1] as! UINavigationController).topViewController as? DetailViewController
@@ -53,7 +37,6 @@ class MasterViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: - Table View
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -62,7 +45,7 @@ class MasterViewController: UITableViewController {
         if searchController.isActive && searchController.searchBar.text != "" {
             return filteredMedications.count
         }
-        return medicationArray.count
+        return model.medications.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,22 +54,20 @@ class MasterViewController: UITableViewController {
         if searchController.isActive && searchController.searchBar.text != "" {
             medication = filteredMedications[indexPath.row]
         } else {
-            medication = medicationArray[indexPath.row]
+            medication = model.medications[indexPath.row]
         }
         cell.textLabel!.text = medication.name
-        // cell.detailTextLabel!.text = medication.description
         return cell
     }
     
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         if editingStyle == UITableViewCellEditingStyle.delete {
-            medicationArray.remove(at: indexPath.row)
+            model.medications.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
-           // .deleteRowsAtIndexPaths([indexPath as IndexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         }
     }
-    // MARK: - Segues
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case "showDetail":
@@ -95,7 +76,7 @@ class MasterViewController: UITableViewController {
                 if searchController.isActive && searchController.searchBar.text != "" {
                     medication = filteredMedications[indexPath.row]
                 } else {
-                    medication = medicationArray[indexPath.row]
+                    medication = model.medications[indexPath.row]
                 }
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailMedication = medication
@@ -115,13 +96,13 @@ class MasterViewController: UITableViewController {
     @IBAction func unwindFromAdd(_ segue: UIStoryboardSegue) {
         let source = segue.source as! AddViewController
         if source.medication != nil {
-            medicationArray.append(source.medication!)
+            model.medications.append(source.medication!)
         }
         tableView!.reloadData()
     }
     
-    func filterContentForSearchText(searchText: String, scope: String = "All") {
-        filteredMedications = medicationArray.filter { medication in
+    func filterContentForSearchText(searchText: String) {
+        filteredMedications = model.medications.filter { medication in
             return medication.name.lowercased().contains(searchText.lowercased())
         }
    
@@ -129,6 +110,7 @@ class MasterViewController: UITableViewController {
     }
     
 }
+//Source:https://www.raywenderlich.com/113772/uisearchcontroller-tutorial
 extension MasterViewController: UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchText: searchController.searchBar.text!)
