@@ -47,7 +47,7 @@
                             <tableViewSection headerTitle="Description" id="6Mf-n4-xBC" userLabel="Description">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sa2-hJ-H8F">
-                                        <rect key="frame" x="0.0" y="221" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sa2-hJ-H8F" id="Z4l-Pa-own">
                                             <frame key="frameInset" width="375" height="44"/>
@@ -75,7 +75,7 @@
                             <tableViewSection headerTitle="PHOTO" id="p49-Uu-yVp" userLabel="Description">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="344" id="APP-LV-Vnp">
-                                        <rect key="frame" x="0.0" y="322" width="375" height="344"/>
+                                        <rect key="frame" x="0.0" y="320" width="375" height="344"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="APP-LV-Vnp" id="AuR-0j-tVL">
                                             <frame key="frameInset" width="375" height="344"/>
@@ -157,11 +157,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j31-yu-RWd" id="lu0-w7-5j4">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IUA-Lj-6wv">
-                                            <frame key="frameInset" minX="15" width="345" height="43"/>
+                                            <frame key="frameInset" minX="15" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -185,7 +185,13 @@
                                 <action selector="quitApp:" destination="axd-0S-F3J" id="jRc-pO-cbX"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="aO3-ba-u1P"/>
+<barButtonItem key="rightBarButtonItem" title="Add" id="ZlN-V8-iqU">
+<connections>
+<segue destination="3bW-p4-Whn" kind="popoverPresentation" identifier="add" popoverAnchorBarButtonItem="ZlN-V8-iqU" id="NWo-eD-0Dk">
+<popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+</segue>
+</connections>
+</barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="84R-nb-dFL" id="dRu-fD-ECW"/>
@@ -221,7 +227,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Sc-WA-BPo" userLabel="Master" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="dev-Bg-K1w">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="dev-Bg-K1w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.76152646797700341" green="0.94901960784313721" blue="0.93950130183506686" alpha="1" colorSpace="calibratedRGB"/>
@@ -303,7 +309,7 @@
         <scene sceneID="bxa-cU-3ly">
             <objects>
                 <navigationController id="cAf-eS-IFy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="cDl-4y-jOG">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="cDl-4y-jOG">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.76152646800000001" green="0.94901960780000005" blue="0.93950130180000002" alpha="1" colorSpace="calibratedRGB"/>

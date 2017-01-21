@@ -33,6 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 extension UIColor {
     static func lightBlue() -> UIColor {
-        return UIColor(red: 0.0/255.0, green: 140/255.0, blue: 143/255.0, alpha: 1.0)
+        return UIColor(red: 194/255.0, green: 242/255.0, blue: 240/255.0, alpha: 1.0)
     }
 }
