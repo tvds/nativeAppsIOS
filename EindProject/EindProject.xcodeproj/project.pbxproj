@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B4D7D361E128255008F86BE /* MedicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4D7D351E128255008F86BE /* MedicationModel.swift */; };
+		0B50170B1E34F58C0027D654 /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = 0B50170A1E34F58C0027D654 /* ReadMe */; };
 		0B51A6511E0ABABE00F5CC55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51A6501E0ABABE00F5CC55 /* AppDelegate.swift */; };
 		0B51A6561E0ABABE00F5CC55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B51A6541E0ABABE00F5CC55 /* Main.storyboard */; };
 		0B51A6581E0ABABE00F5CC55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B51A6571E0ABABE00F5CC55 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		0B4D7D351E128255008F86BE /* MedicationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationModel.swift; sourceTree = "<group>"; };
+		0B50170A1E34F58C0027D654 /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
 		0B51A64D1E0ABABE00F5CC55 /* EindProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EindProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B51A6501E0ABABE00F5CC55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B51A6551E0ABABE00F5CC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		0B51A6441E0ABABE00F5CC55 = {
 			isa = PBXGroup;
 			children = (
+				0B50170A1E34F58C0027D654 /* ReadMe */,
 				0B51A64F1E0ABABE00F5CC55 /* EindProject */,
 				0B51A6641E0ABABE00F5CC55 /* EindProjectTests */,
 				0B51A66F1E0ABABE00F5CC55 /* EindProjectUITests */,
@@ -263,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B50170B1E34F58C0027D654 /* ReadMe in Resources */,
 				0B51A65B1E0ABABE00F5CC55 /* LaunchScreen.storyboard in Resources */,
 				0B51A6581E0ABABE00F5CC55 /* Assets.xcassets in Resources */,
 				0B51A6561E0ABABE00F5CC55 /* Main.storyboard in Resources */,
