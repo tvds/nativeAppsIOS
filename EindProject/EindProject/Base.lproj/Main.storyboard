@@ -185,13 +185,13 @@
                                 <action selector="quitApp:" destination="axd-0S-F3J" id="jRc-pO-cbX"/>
                             </connections>
                         </barButtonItem>
-<barButtonItem key="rightBarButtonItem" title="Add" id="ZlN-V8-iqU">
-<connections>
-<segue destination="3bW-p4-Whn" kind="popoverPresentation" identifier="add" popoverAnchorBarButtonItem="ZlN-V8-iqU" id="NWo-eD-0Dk">
-<popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-</segue>
-</connections>
-</barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="ZlN-V8-iqU">
+                            <connections>
+                                <segue destination="3bW-p4-Whn" kind="popoverPresentation" identifier="add" popoverAnchorBarButtonItem="ZlN-V8-iqU" id="NWo-eD-0Dk">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="84R-nb-dFL" id="dRu-fD-ECW"/>
