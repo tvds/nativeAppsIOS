@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,9 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bp-id-pgQ">
-                                <frame key="frameInset" minX="75" minY="49" width="224" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bp-id-pgQ">
                                 <attributedString key="attributedText">
                                     <fragment content="Native Apps: IOS">
                                         <attributes>
@@ -31,9 +30,8 @@
                                 </attributedString>
                                 <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medication app" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5U-RN-RQK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Medication app" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5U-RN-RQK">
                                 <frame key="frameInset" minX="89" minY="280" width="196" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="FZLTXHB--B51-0" family="Lantinghei TC" pointSize="28"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -41,6 +39,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.17981988191604614" green="0.5913851261138916" blue="0.55198889970779419" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5bp-id-pgQ" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="29" id="9Zt-JG-6JT"/>
+                            <constraint firstItem="Q5U-RN-RQK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="bbi-g2-p1S"/>
+                            <constraint firstItem="Q5U-RN-RQK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bu8-kl-2To"/>
+                            <constraint firstItem="5bp-id-pgQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="68" id="eBX-Ew-tGz"/>
+                            <constraint firstItem="5bp-id-pgQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-252.5" id="sfI-GG-GzN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

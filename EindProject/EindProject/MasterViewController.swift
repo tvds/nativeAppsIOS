@@ -13,15 +13,11 @@ class MasterViewController: UITableViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // --- Voor dummy data zet onderstaande uit commentaar, build app en daarna terug in commentaar ---
         /*
         model.setDummyData()
         medications = model.medications
-            [
-            Medication(description:"Behandeling parkinson", name:"Akineton", image: UIImage(named: "Akineton")!),
-            Medication(description:"antibioticum", name:"Amoxiclav teva", image: UIImage(named: "Amoxiclav teva")!),
-            Medication(description:"Hypertensie", name:"Bisoprolol", image: UIImage(named: "Bisoprolol")!)
-        ]
         insertItems()
         */
        
