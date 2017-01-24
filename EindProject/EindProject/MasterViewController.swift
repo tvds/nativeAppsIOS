@@ -13,22 +13,25 @@ class MasterViewController: UITableViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        //model.setDummyData()
-       // medications = model.medications
-            /*[
+        // --- Voor dummy data zet onderstaande uit commentaar, build app en daarna terug in commentaar ---
+        /*
+        model.setDummyData()
+        medications = model.medications
+            [
             Medication(description:"Behandeling parkinson", name:"Akineton", image: UIImage(named: "Akineton")!),
             Medication(description:"antibioticum", name:"Amoxiclav teva", image: UIImage(named: "Amoxiclav teva")!),
             Medication(description:"Hypertensie", name:"Bisoprolol", image: UIImage(named: "Bisoprolol")!)
-        ]*/
+        ]
+        insertItems()
+        */
        
         retrieveItems()
         
-        //model.setDummyData()                                        // haalt dummy data op
-        searchController.searchResultsUpdater = self                // check wanneer text veranderd in searchbar
-        searchController.dimsBackgroundDuringPresentation = false    // searchController ligt op een andere controller waar de resultaten op verschijnen, die mag dus niet gedimd worden
-        definesPresentationContext = true                           // searchbar verdwijnt bij veranderen van view
-        tableView.tableHeaderView = searchController.searchBar      // searchbar toevoegen aan header
-        self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)  // fixt white gap tussen header en results
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+        self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
 
         
         if let splitViewController = splitViewController {
