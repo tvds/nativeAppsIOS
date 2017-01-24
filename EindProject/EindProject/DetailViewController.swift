@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     func configureView() {
         if let detailMedication = detailMedication {
             if let detailDescriptionLabel = detailDescriptionLabel, let medicationImageView = medicationImageView {
-                detailDescriptionLabel.text = detailMedication.description
+                detailDescriptionLabel.text = detailMedication.myDescription
                 medicationImageView.image =  detailMedication.image
                 title = detailMedication.name
             }
